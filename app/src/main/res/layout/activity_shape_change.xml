@@ -1,0 +1,30 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/circle_brood_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffd4d9da"
+        app:layout_constraintBottom_toTopOf="@+id/cool_wait_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_renderer="CircleBroodLoadingRenderer" />
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/cool_wait_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ff1B78DD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_brood_view"
+        app:loading_renderer="CoolWaitLoadingRenderer" />
+
+</android.support.constraint.ConstraintLayout>

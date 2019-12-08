@@ -1,0 +1,30 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/electric_fan_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fffcd03c"
+        app:layout_constraintBottom_toTopOf="@+id/day_night_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_renderer="ElectricFanLoadingRenderer" />
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/day_night_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ff071c28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/electric_fan_view"
+        app:loading_renderer="DayNightLoadingRenderer" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/collision_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffe9e4d1"
+        app:layout_constraintBottom_toTopOf="@+id/guard_view"
+        app:layout_constraintEnd_toStartOf="@+id/swap_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_renderer="CollisionLoadingRenderer" />
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/swap_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ff9c0000"
+        app:layout_constraintBottom_toTopOf="@+id/dance_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/collision_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_renderer="SwapLoadingRenderer" />
+
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/guard_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ff000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dance_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collision_view"
+        app:loading_renderer="GuardLoadingRenderer" />
+
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/dance_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ff94d0c1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guard_view"
+        app:layout_constraintTop_toBottomOf="@+id/swap_view"
+        app:loading_renderer="DanceLoadingRenderer" />
+
+
+</android.support.constraint.ConstraintLayout>
